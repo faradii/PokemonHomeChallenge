@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+Pokemon Home Challenge############################################
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ANZEIGE #################################
 
-## Available Scripts
+--------Anmeldung
+A Registrieren /Login
 
-In the project directory, you can run:
+-------Hauptseite
+B Dashboard Spieler 1 und 2
 
-### `npm start`
+C -dein ungeschlüpftes Ei (Pokemon)
+-dein Avatar (inkl. Level)
+-dein Pokedex ( Liste aller bisher gesammelten Pokemons)
+-deine Liste der Aufgaben (Anfangs leer)
+-deine Einstellungen
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+AKTIONEN ###############################
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+--------Anmeldung einmalig
+-Registrieren
+-Email bestätigen
+-Einloggen
 
-### `npm test`
+-------Hauptseite
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. tippe auf Spieler 1 oder Spieler 2 -dein Spieler wird farblich hervorgehoben
+2. tippe auf weiter -betrachte hier dein aktuelles Ei und tippe es an damit es springt und Musik ertönt
+3. tippe auf das Zahnrad (Setup) -füge hier deine erste Aufgabe sowie deine persönliche Gewichtung hinzu
+4. tippe auf Pikachu
+5. tippe auf den Pokeball (Liste der Aufgaben) -sammel den Pokeball ein nach Erledigung der Aufgabe und bestätige es nochmals
+6. tippe auf den Pokedex ( Liste aller Pokemon) -betrachte hier deine bisherige Sammlung der Pokemons
+   Optional: tippe auf den Avatar (Ash oder May) -Ändere hier deinen Spieler, dein Spieler wird farblich hervorgehoben
 
-### `npm run build`
+------Events----------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-Bonuspunkte - dein Pokemon /Ei erhält Bonuspunkte, wenn du eine Aufgabe erledigt hast (nach Zufall)
