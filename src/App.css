@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  background: url(/src/images/bg1.png);
+  /* background: rgb(86, 85, 85); */
+  background-size: cover;
+  background-repeat: none;
+  background-position: center bottom;
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* .loading {
+  height: 100vh;
+  width: 100vw;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.App-header {
+  height: calc(100vh - 100px);
+  background-color: rgb(255, 255, 255);
+  color: rgb(129, 127, 127);
+  /* margin-top: 20px; */
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.loginsprite {
+  max-width: 150px;
+
+  margin-left: 50px;
+}
+button {
+  margin: 5px;
+  background-color: white;
+  color: rgb(78, 77, 77);
+  padding: 8px;
+  border: 1px solid grey;
+}
+.button_reg_log {
+  margin-top: 30px;
+}
+.inputemail {
+  font-size: 18px;
+}
+.inputpassword {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.loginandregister {
+  margin-top: 50px;
+
+  color: rgb(45, 45, 45);
+  box-sizing: border-box;
+}
+.titlelogin {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 110px;
+  background-color: rgba(73, 73, 73, 0);
+}
+
+.playerbuttons,
+.iconrot,
+.iconblau {
+  height: 60px;
+  width: 70px;
+  position: relative;
+  left: 20px;
+}
+.button_home {
+  height: 50px;
+  width: 50px;
+}
+.menubuttons {
+  width: 60px;
+  height: 60px;
+  color: white;
+  padding: 2px;
+  border: none;
+  /* border-radius: 10px; */
+  background-color: rgba(68, 68, 69, 0);
+}
+/* das ist wenn ein menu geklickt wird*/
+.pokemon1 {
+  display: none;
+}
+
+.pokedexbuttonmenu {
+  width: 60px;
+  height: 60px;
+  background-color: #000000;
+  padding: 2px;
+  border: none;
+  /* border-radius: 10px; */
+  background-color: rgba(68, 68, 69, 0);
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.Balken {
+  position: relative;
+  left: -100px;
+  display: flex;
+  bottom: 30px;
+}
+
+progress {
+  accent-color: rgb(0, 0, 0);
+  /* height: 30px; */
+}
+.lvl {
+  /* display: none; */
+  position: relative;
+
+  color: rgb(37, 37, 37);
+}
+
+.button_energy,
+.button_settings {
+  width: 50px;
+  height: 50px;
+}
+.pokemonCard {
+  height: calc(100vh - 90px);
+  color: #000000;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.overview {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(73, 73, 73, 0);
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px;
+  height: 100%;
+}
+
+.pokeCardpokis {
+  /* margin: 20px; */
+  height: 30%;
+  width: 30%;
+}
+
+/* .button_switch {
+} */
+
+.overview_Text {
+  color: white;
+}
+.ashspokedex {
+  padding: 0.2em 0.5em;
+  text-align: center;
+  /* color: rgb(0, 0, 0); */
+  background-color: rgb(55, 55, 166);
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.ashspokedexaus {
+  padding: 0.2em 0.5em;
+  text-align: center;
+  color: rgb(158, 155, 155);
+  background-color: rgb(186, 181, 180);
+  border: 5px solid rgb(96, 95, 95);
+  border-radius: 5px;
+}
+.ashspokename {
+  background: rgb(72, 72, 232);
+  /* border: 1px solid rgb(255, 255, 255); */
+  padding: 0.2em 0.5em;
+  border-radius: 20px;
+  color: White;
+  position: absolute;
+  left: 50px;
+}
+
+.mayspokedex {
+  padding: 0.2em 0.5em;
+  text-align: center;
+  /* color: rgb(255, 255, 255); */
+
+  background-color: rgb(202, 83, 59);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.mayspokedexaus {
+  padding: 0.2em 0.5em;
+  text-align: center;
+  color: rgb(165, 162, 162);
+
+  background-color: rgb(186, 181, 180);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: 5px solid rgb(110, 109, 109);
+  border-radius: 5px;
+}
+.mayspokename {
+  background: rgb(213, 61, 61);
+  /* border: 1px solid rgb(255, 255, 255); */
+  padding: 0.2em 0.5em;
+  border-radius: 20px;
+  color: White;
+  position: absolute;
+  left: 50px;
+}
+/*Menüseite Pokemon*/
+.pokemon {
+  height: calc(100vh - 90px);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* border: 15px double rgb(255, 255, 255); */
+  /* background-color: #2d2e2ebc; */
+}
+/* Hauptpokemon*/
+.rot1,
+.blau1 {
+  max-height: 250px;
+  max-width: 250px;
+  margin-bottom: 50px;
+}
+
+.moving-photo {
+  transition: transform 0.2s ease-in;
+}
+
+.move-up {
+  transform: translateY(-300px);
+}
+/*Menüseite*/
+.pokedex {
+  height: 100%;
+  overflow-y: scroll;
+
+  text-align: center;
+}
+
+.pokedexmap {
+  margin: 5px;
+  padding: 5px;
+  height: 80px;
+  width: 80px;
+}
+
+.pokedexmapfilter {
+  margin: 5px;
+  padding: 5px;
+  height: 80px;
+  width: 80px;
+  /* background-color: rgb(255, 255, 255); */
+
+  filter: grayscale(1) blur(9px);
+}
+
+/*Menüseite Check*/
+.check {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff00;
+  /* border-top: 15px double rgb(43, 59, 112); */
+  /* border-bottom: 15px double rgb(43, 59, 112); */
+
+  /* border-radius: 10px; */
+}
+.textbuttonresetlogout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 10px;
+}
+.alleaufgabenzurück {
+  background: linear-gradient(to top, #ffffff, #ffffff);
+  border: 3px solid rgb(146, 144, 143);
+
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  color: rgb(132, 126, 126);
+}
+.popup_candies {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgb(5, 5, 5);
+  z-index: 150;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popup_candies_text {
+  font-size: 2em;
+  font-weight: 900;
+  font-style: italic;
+
+  color: rgb(255, 255, 255);
+  width: 300px;
+  text-align: center;
+}
+.button_close_popup_candies {
+  height: 150px;
+  width: 150px;
+  background: linear-gradient(to right bottom, #dfe56a, #29a27e);
+  background-image: url("./images/energy.png");
+  background-size: cover;
+  border-radius: 10%;
+  border: 1px solid rgb(5, 72, 61);
+  border: none;
+}
+.candy {
+  height: 200px;
+  width: 200px;
+}
+.popup_energy {
+  height: 50px;
+  width: 50px;
+}
+.Extra100 {
+  font-size: larger;
+  color: rgb(11, 194, 130);
+}
+.ul1 {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px;
+  height: 100%;
+}
+.li1 {
+  border-radius: 5px;
+
+  border: 2px solid rgb(160, 173, 221);
+  margin-top: 5px;
+  padding-right: 5px;
+  list-style: none;
+}
+
+.sternenstaub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.berry_button {
+  background-image: url(/src/energy.png);
+  background-size: cover;
+  border: none;
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+.berry_button:disabled {
+  background-image: none;
+  background-color: rgb(255, 255, 255);
+}
+.popup {
+  background-color: rgb(0, 0, 0);
+}
+.popup-content {
+  background-color: rgb(255, 255, 255);
+  color: rgb(121, 119, 119);
+  border-top: 2px solid rgb(178, 177, 175);
+  border-left: 2px solid rgb(141, 140, 139);
+  border-right: 2px solid rgb(139, 139, 138);
+}
+.popup-text {
+  text-align: center;
+  width: 100%;
+}
+.popup-aufgabe {
+  border: 1px solid white;
+  font-size: 2em;
+  background-color: #ffffff;
+  color: black;
+}
+.button_zurück,
+.button_erledigt {
+  height: 50px;
+  width: 150px;
+  color: #ffffff;
+  border: none;
+  margin-top: 20px;
+}
+
+.button_erledigt {
+  background: linear-gradient(to right bottom, #dfe56a, #29a27e);
+  border: none;
+  padding: 1em 1.5em;
+  color: White;
+}
+.button_zurück {
+  background-color: rgb(126, 122, 122);
+}
+
+.counter {
+  width: 50px;
+  color: #0da779;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+/*Menüseite Einstellungen*/
+.einstellungen {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(37, 37, 37); */
+}
+
+.addTask {
+  width: 100%;
+  background-color: rgba(245, 18, 245, 0);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_datenbank {
+  font-size: 20px;
+  border: 2px solid rgb(170, 183, 241);
+  border-radius: 5px;
+}
+.rateandsave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select_button {
+  border: 5px double rgb(185, 186, 189);
+
+  background-color: #ffffff;
+  color: rgb(255, 153, 0);
+  font-size: 25px;
+  width: 200px;
+  margin: 5px;
+  border: 2px solid rgb(170, 183, 241);
+  border-radius: 5px;
+}
+.aufgabehinzufügen {
+  background-color: rgb(255, 255, 255);
+
+  border: 3px solid rgb(113, 113, 112);
+  box-shadow: 0px 0px 3px 0px;
+
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  color: rgb(81, 77, 77);
+}
+
+.ul2 {
+  /* height: 45vh; */
+  padding: 5px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* border: 5px solid rgb(173, 171, 171); */
+  height: 100%;
+}
+.li2 {
+  border-radius: 5px;
+  border: 2px solid rgb(160, 173, 221);
+
+  margin-top: 5px;
+  list-style: none;
+}
+.sterne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sterne_angabe {
+  width: 50px;
+  color: rgb(219, 120, 63);
+}
+
+.button_entf {
+  padding-right: 10px;
+  margin-right: 10px;
+  color: #9d8407;
+  border: none;
+  font-size: 1em;
+  background: none;
+}
+
+.button_logout,
+.button_statistics,
+.button_help {
+  background-color: #0da77900;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 100px;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+/*Listen allgemein*/
+.li1,
+.li2 {
+  background-color: #ffffff;
+
+  font-size: 1.2rem;
+}
