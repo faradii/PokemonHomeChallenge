@@ -1,20 +1,4 @@
-Pokemon Home Challenge############################################
-
-ANZEIGE #################################
-
---------Anmeldung
-A Registrieren /Login
-
--------Hauptseite
-B Dashboard Spieler 1 und 2
-
-C -dein ungeschlüpftes Ei (Pokemon)
--dein Avatar (inkl. Level)
--dein Pokedex ( Liste aller bisher gesammelten Pokemons)
--deine Liste der Aufgaben (Anfangs leer)
--deine Einstellungen
-
-AKTIONEN ###############################
+Pokemon Home Challenge
 
 --------Anmeldung einmalig
 -Registrieren
@@ -22,6 +6,16 @@ AKTIONEN ###############################
 -Einloggen
 
 -------Hauptseite
+
+1. Dashboard Spieler 1 und 2
+
+2. dein ungeschlüpftes Ei (Pokemon)
+   -dein Avatar (inkl. Level)
+   -dein Pokedex ( Liste aller bisher gesammelten Pokemons)
+   -deine Liste der Aufgaben (Anfangs leer)
+   -deine Einstellungen
+
+AKTIONEN ###############################
 
 1. tippe auf Spieler 1 oder Spieler 2 -dein Spieler wird farblich hervorgehoben
 2. tippe auf weiter -betrachte hier dein aktuelles Ei und tippe es an damit es springt und Musik ertönt
