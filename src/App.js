@@ -3988,13 +3988,6 @@ function App() {
                 </div>
               ) : ( */}
 
-              <button
-                className="pokedexbuttonmenu"
-                onClick={() => setAufgabeEinstellung("pokedex")}
-              >
-                <h3 style={{ color: "white" }}> Pokedex</h3>
-                <img src={pokedex} className="button_home" alt="button_home" />
-              </button>
               <>
                 {selectedSubuser === "Rot" ? (
                   <>
@@ -4077,63 +4070,6 @@ function App() {
                   onClick={handleResetAufgaben}
                 >
                   <h2>↻</h2>
-                </button>
-                <button className="menubuttons">
-                  {selectedSubuser === "Rot" ? (
-                    <div className="playerbuttons">
-                      <img
-                        src={player2}
-                        onClick={() => {
-                          setAufgabeEinstellung("pokemonCard");
-                          // handleSubuserToggle();
-                        }}
-                        className="iconrot"
-                        alt="rot"
-                      />
-                      <div className="Balken">
-                        <p className="lvl"> lvl: {roundedNumber}</p>
-                        <progress
-                          max={100}
-                          value={(originalNumber % 100) + 3}
-                        ></progress>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="playerbuttons">
-                      <img
-                        src={player1}
-                        onClick={() => {
-                          setAufgabeEinstellung("pokemonCard");
-                          // handleSubuserToggle();
-                        }}
-                        className="iconblau"
-                        alt="rot"
-                      />
-
-                      <div className="Balken">
-                        <p className="lvl"> lvl: {roundedNumber}</p>
-                        <progress
-                          max={100}
-                          value={(originalNumber % 100) + 3}
-                        ></progress>
-                      </div>
-                    </div>
-                  )}
-                </button>
-                <button
-                  className={
-                    aufgabeeinstellung === "settings"
-                      ? "pokemon1"
-                      : "menubuttons"
-                  }
-                  onClick={() => setAufgabeEinstellung("settings")}
-                >
-                  <h3 style={{ color: "white" }}> Daten</h3>
-                  <img
-                    src={settings}
-                    className="button_settings"
-                    alt="button_settings"
-                  />
                 </button>
               </div>
               {candytext && (
@@ -4285,6 +4221,68 @@ function App() {
               <h2>Quests</h2>
 
               <img src={energy} className="button_energy" alt="button_energy" />
+            </button>
+            <button className="menubuttons">
+              {selectedSubuser === "Rot" ? (
+                <div className="playerbuttons">
+                  <img
+                    src={player2}
+                    onClick={() => {
+                      setAufgabeEinstellung("pokemonCard");
+                      // handleSubuserToggle();
+                    }}
+                    className="iconrot"
+                    alt="rot"
+                  />
+                  <div className="Balken">
+                    <p className="lvl"> lvl: {roundedNumber}</p>
+                    <progress
+                      max={100}
+                      value={(originalNumber % 100) + 3}
+                    ></progress>
+                  </div>
+                </div>
+              ) : (
+                <div className="playerbuttons">
+                  <img
+                    src={player1}
+                    onClick={() => {
+                      setAufgabeEinstellung("pokemonCard");
+                      // handleSubuserToggle();
+                    }}
+                    className="iconblau"
+                    alt="rot"
+                  />
+
+                  <div className="Balken">
+                    <p className="lvl"> lvl: {roundedNumber}</p>
+                    <progress
+                      max={100}
+                      value={(originalNumber % 100) + 3}
+                    ></progress>
+                  </div>
+                </div>
+              )}
+            </button>
+            <button
+              className={
+                aufgabeeinstellung === "settings" ? "pokemon1" : "menubuttons"
+              }
+              onClick={() => setAufgabeEinstellung("settings")}
+            >
+              <h3 style={{ color: "white" }}> Daten</h3>
+              <img
+                src={settings}
+                className="button_settings"
+                alt="button_settings"
+              />
+            </button>
+            <button
+              className="pokedexbuttonmenu"
+              onClick={() => setAufgabeEinstellung("pokedex")}
+            >
+              <h3 style={{ color: "white" }}> Pokedex</h3>
+              <img src={pokedex} className="button_home" alt="button_home" />
             </button>
           </div>
         </div>

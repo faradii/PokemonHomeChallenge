@@ -106,7 +106,14 @@ button {
 }
 /* das ist wenn ein menu geklickt wird*/
 .pokemon1 {
-  display: none;
+  /* display: flex; */
+  width: 60px;
+  height: 60px;
+  color: white;
+  padding: 2px;
+  border: none;
+  /* border-radius: 10px; */
+  background-color: rgba(68, 68, 69, 0);
 }
 
 .pokedexbuttonmenu {
@@ -374,7 +381,7 @@ progress {
 }
 
 .berry_button {
-  background-image: url(/src/energy.png);
+  background-image: url("./images/energy.png");
   background-size: cover;
   border: none;
   height: 30px;
