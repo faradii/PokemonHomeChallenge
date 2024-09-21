@@ -3867,6 +3867,7 @@ function App() {
                 <div className="einstellungenuppermenu"></div>
 
                 <div className="overview">
+                  <h3>Wähle Spieler</h3>
                   <div className="overview_paket">
                     <div
                       className={
@@ -3886,15 +3887,14 @@ function App() {
                         <p>Tropähen: </p>
                         <p>Top 3 Erledigungen: </p>
                       </div>
-                      <ul className="ul">
+                      <ul className="ul1">
                         {aufgaben
 
                           .sort((b, a) => a.countermay - b.countermay)
                           .slice(0, 3)
                           .map((aufgabeObj) => (
-                            <li className="li1" key={aufgabeObj.id}>
+                            <li key={aufgabeObj.id}>
                               <div className="sternenstaub">
-                                <button className="berry_button"></button>
                                 <div className="aufgabe">
                                   {aufgabeObj.aufgabe}
                                 </div>
@@ -3936,9 +3936,8 @@ function App() {
                           .sort((b, a) => a.counterash - b.counterash)
                           .slice(0, 3)
                           .map((aufgabeObj) => (
-                            <li className="li1" key={aufgabeObj.id}>
+                            <li key={aufgabeObj.id}>
                               <div className="sternenstaub">
-                                <button className="berry_button"></button>
                                 <div className="aufgabe">
                                   {aufgabeObj.aufgabe}
                                 </div>
@@ -4204,28 +4203,42 @@ function App() {
           <div className="menu">
             <button
               className={
-                aufgabeeinstellung === "pokemon" ? "pokemon1" : "menubuttons"
-              }
-              onClick={() => setAufgabeEinstellung("pokemon")}
-            >
-              <h2>Poki</h2>
-              <img src={home} className="button_home" alt="button_home" />
-            </button>
-
-            <button
-              className={
                 aufgabeeinstellung === "quests" ? "pokemon1" : "menubuttons"
               }
               onClick={() => setAufgabeEinstellung("quests")}
             >
               <h2>Quests</h2>
+              <div className="Balken">
+                <p className="lvl"> lvl: {roundedNumber}</p>
+                <progress
+                  max={100}
+                  value={(originalNumber % 100) + 3}
+                ></progress>
+              </div>
 
-              <img src={energy} className="button_energy" alt="button_energy" />
+              {/* <img src={energy} className="button_energy" alt="button_energy" /> */}
+            </button>
+            <button
+              className={
+                aufgabeeinstellung === "pokemon" ? "pokemon1" : "menubuttons"
+              }
+              onClick={() => setAufgabeEinstellung("pokemon")}
+            >
+              <h2>Poki</h2>
+
+              {/* <img src={home} className="button_home" alt="button_home" /> */}
             </button>
             <button className="menubuttons">
               {selectedSubuser === "Rot" ? (
                 <div className="playerbuttons">
-                  <img
+                  <button
+                    onClick={() => {
+                      setAufgabeEinstellung("pokemonCard");
+                    }}
+                  >
+                    <h2>May</h2>
+                  </button>
+                  {/* <img
                     src={player2}
                     onClick={() => {
                       setAufgabeEinstellung("pokemonCard");
@@ -4233,18 +4246,18 @@ function App() {
                     }}
                     className="iconrot"
                     alt="rot"
-                  />
-                  <div className="Balken">
-                    <p className="lvl"> lvl: {roundedNumber}</p>
-                    <progress
-                      max={100}
-                      value={(originalNumber % 100) + 3}
-                    ></progress>
-                  </div>
+                  /> */}
                 </div>
               ) : (
                 <div className="playerbuttons">
-                  <img
+                  <button
+                    onClick={() => {
+                      setAufgabeEinstellung("pokemonCard");
+                    }}
+                  >
+                    <h2>Ash</h2>
+                  </button>
+                  {/* <img
                     src={player1}
                     onClick={() => {
                       setAufgabeEinstellung("pokemonCard");
@@ -4252,15 +4265,7 @@ function App() {
                     }}
                     className="iconblau"
                     alt="rot"
-                  />
-
-                  <div className="Balken">
-                    <p className="lvl"> lvl: {roundedNumber}</p>
-                    <progress
-                      max={100}
-                      value={(originalNumber % 100) + 3}
-                    ></progress>
-                  </div>
+                  /> */}
                 </div>
               )}
             </button>
@@ -4270,19 +4275,19 @@ function App() {
               }
               onClick={() => setAufgabeEinstellung("settings")}
             >
-              <h3 style={{ color: "white" }}> Daten</h3>
-              <img
+              <h2> Daten</h2>
+              {/* <img
                 src={settings}
                 className="button_settings"
                 alt="button_settings"
-              />
+              /> */}
             </button>
             <button
               className="pokedexbuttonmenu"
               onClick={() => setAufgabeEinstellung("pokedex")}
             >
-              <h3 style={{ color: "white" }}> Pokedex</h3>
-              <img src={pokedex} className="button_home" alt="button_home" />
+              <h2> Pokedex</h2>
+              {/* <img src={pokedex} className="button_home" alt="button_home" /> */}
             </button>
           </div>
         </div>
