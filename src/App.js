@@ -217,12 +217,12 @@ const firestore = getFirestore(app);
 
 function App() {
   const [user, setUser] = useState(null);
-  const [selectedSubuser, setSelectedSubuser] = useState("Rot"); // Zustand für den ausgewählten Unternutzer hinzugefügt
+  const [selectedSubuser, setSelectedSubuser] = useState("Blau"); // Zustand für den ausgewählten Unternutzer hinzugefügt
   const [subuserCoins, setSubuserCoins] = useState(0);
   const [candytext, setCandyText] = useState(false);
   const [subuserImageRot, setSubuserImageRot] = useState(egg);
   const [subuserImageBlau, setSubuserImageBlau] = useState(egg);
-  const [aufgabeeinstellung, setAufgabeEinstellung] = useState("pokemonCard");
+  const [aufgabeeinstellung, setAufgabeEinstellung] = useState("pokemon");
   const [pokedexrot, setPokedexRot] = useState([]);
   const [blurIndexrot, setBlurIndexRot] = useState(null);
   const [blurIndexblau, setBlurIndexBlau] = useState(null);
@@ -423,11 +423,8 @@ function App() {
   // const handleSubuserToggle = (subuser) => {
   //   setSelectedSubuser(subuser);
   // };
-  const handleSubuserTogglemay = () => {
-    setSelectedSubuser("Rot");
-  };
-  const handleSubuserToggleash = () => {
-    setSelectedSubuser("Blau");
+  const handleSubuserToggle = () => {
+    setSelectedSubuser(selectedSubuser === "Rot" ? "Blau" : "Rot");
   };
 
   const handleErledigtAufgabe = async (taskId, erledigt) => {
@@ -1288,290 +1285,68 @@ function App() {
               },
 
               // Porygon
-              {
-                start: 76000,
-                end: 76500,
-                image: egg,
-                blurIndex: 62,
-                name: "???",
-              },
-              {
-                start: 76500,
-                end: 77500,
-                image: b137,
-                blurIndex: 63,
-                name: "Porygon",
-              },
+              { start: 76000, end: 76500, image: egg, blurIndex: 62 },
+              { start: 76500, end: 77500, image: b137, blurIndex: 63 },
 
               // Kicklee
-              {
-                start: 77500,
-                end: 78000,
-                image: egg,
-                blurIndex: 63,
-                name: "...es tritt",
-              },
-              {
-                start: 78000,
-                end: 79000,
-                image: b109,
-                blurIndex: 64,
-                name: "Rabautz",
-              },
-              {
-                start: 79000,
-                end: 80000,
-                image: b110,
-                blurIndex: 65,
-                name: "Kicklee",
-              },
+              { start: 77500, end: 78000, image: egg, blurIndex: 63 },
+              { start: 78000, end: 79000, image: b109, blurIndex: 64 },
+              { start: 79000, end: 80000, image: b110, blurIndex: 65 },
 
               // Lapras
-              {
-                start: 80000,
-                end: 80500,
-                image: egg,
-                blurIndex: 65,
-                name: "..wird mal ziemlich groß",
-              },
-              {
-                start: 80500,
-                end: 81500,
-                image: b146,
-                blurIndex: 66,
-                name: "Lapras",
-              },
+              { start: 80000, end: 80500, image: egg, blurIndex: 65 },
+              { start: 80500, end: 81500, image: b146, blurIndex: 66 },
 
               // Aerodactyl
-              {
-                start: 81500,
-                end: 82000,
-                image: egg,
-                blurIndex: 66,
-                name: "...ein sehr altes Ei",
-              },
-              {
-                start: 82000,
-                end: 83000,
-                image: b155,
-                blurIndex: 67,
-                name: "Aerodactyl",
-              },
+              { start: 81500, end: 82000, image: egg, blurIndex: 66 },
+              { start: 82000, end: 83000, image: b155, blurIndex: 67 },
 
               // Zapdos
-              {
-                start: 83000,
-                end: 83500,
-                image: egg,
-                blurIndex: 67,
-                name: "!Hochspannung!",
-              },
-              {
-                start: 83500,
-                end: 84500,
-                image: b145,
-                blurIndex: 68,
-                name: "Zapdos",
-              },
+              { start: 83000, end: 83500, image: egg, blurIndex: 67 },
+              { start: 83500, end: 84500, image: b145, blurIndex: 68 },
 
               // Aquana
-              {
-                start: 84500,
-                end: 85000,
-                image: egg,
-                blurIndex: 68,
-                name: "!!!",
-              },
-              {
-                start: 85000,
-                end: 86000,
-                image: b29,
-                blurIndex: 69,
-                name: "Evoli",
-              },
-              {
-                start: 86000,
-                end: 87000,
-                image: b157,
-                blurIndex: 70,
-                name: "Aquana",
-              },
+              { start: 84500, end: 85000, image: egg, blurIndex: 68 },
+              { start: 85000, end: 86000, image: b29, blurIndex: 69 },
+              { start: 86000, end: 87000, image: b157, blurIndex: 70 },
 
               // Mew
-              {
-                start: 87000,
-                end: 87500,
-                image: egg,
-                blurIndex: 70,
-                name: "...mystisch",
-              },
-              {
-                start: 87500,
-                end: 88500,
-                image: b160,
-                blurIndex: 71,
-                name: "Mew",
-              },
+              { start: 87000, end: 87500, image: egg, blurIndex: 70 },
+              { start: 87500, end: 88500, image: b160, blurIndex: 71 },
 
               // Pichu
-              {
-                start: 88500,
-                end: 89000,
-                image: egg,
-                blurIndex: 71,
-                name: "...süß",
-              },
-              {
-                start: 89000,
-                end: 90000,
-                image: b138,
-                blurIndex: 72,
-                name: "Pichu",
-              },
-              {
-                start: 90000,
-                end: 91000,
-                image: b139,
-                blurIndex: 73,
-                name: "Pikachu",
-              },
-              {
-                start: 91000,
-                end: 92000,
-                image: b140,
-                blurIndex: 74,
-                name: "Raichu",
-              },
+              { start: 88500, end: 89000, image: egg, blurIndex: 71 },
+              { start: 89000, end: 90000, image: b138, blurIndex: 72 },
+              { start: 90000, end: 91000, image: b139, blurIndex: 73 },
+              { start: 91000, end: 92000, image: b140, blurIndex: 74 },
 
               // Pummeluf
-              {
-                start: 92000,
-                end: 92500,
-                image: egg,
-                blurIndex: 74,
-                name: "...hört gerne Musik",
-              },
-              {
-                start: 92500,
-                end: 93500,
-                image: b128,
-                blurIndex: 75,
-                name: "Fluffeluff",
-              },
-              {
-                start: 93500,
-                end: 94500,
-                image: b129,
-                blurIndex: 76,
-                name: "Pummeluff",
-              },
-              {
-                start: 94500,
-                end: 95500,
-                image: b130,
-                blurIndex: 77,
-                name: "Knuddeluf",
-              },
+              { start: 92000, end: 92500, image: egg, blurIndex: 74 },
+              { start: 92500, end: 93500, image: b128, blurIndex: 75 },
+              { start: 93500, end: 94500, image: b129, blurIndex: 76 },
+              { start: 94500, end: 95500, image: b130, blurIndex: 77 },
               // Enton
-              {
-                start: 95500,
-                end: 96000,
-                image: egg,
-                blurIndex: 77,
-                name: "...braucht Ruhe",
-              },
-              {
-                start: 96000,
-                end: 97000,
-                image: b147,
-                blurIndex: 78,
-                name: "Enton",
-              },
-              {
-                start: 97000,
-                end: 98000,
-                image: b148,
-                blurIndex: 79,
-                name: "Entoron",
-              },
+              { start: 95500, end: 96000, image: egg, blurIndex: 77 },
+              { start: 96000, end: 97000, image: b147, blurIndex: 78 },
+              { start: 97000, end: 98000, image: b148, blurIndex: 79 },
               // Porenta
-              {
-                start: 98000,
-                end: 98500,
-                image: egg,
-                blurIndex: 79,
-                name: "zickig...",
-              },
-              {
-                start: 98500,
-                end: 99500,
-                image: b118,
-                blurIndex: 80,
-                name: "Porenta",
-              },
+              { start: 98000, end: 98500, image: egg, blurIndex: 79 },
+              { start: 98500, end: 99500, image: b118, blurIndex: 80 },
 
               // Smogon
-              {
-                start: 99500,
-                end: 100000,
-                image: egg,
-                blurIndex: 80,
-                name: "mag schmutzige Plätze..",
-              },
-              {
-                start: 100000,
-                end: 100500,
-                image: b141,
-                blurIndex: 81,
-                name: "Smogon",
-              },
+              { start: 99500, end: 100000, image: egg, blurIndex: 80 },
+              { start: 100000, end: 100500, image: b141, blurIndex: 81 },
 
-              {
-                start: 100500,
-                end: 101000,
-                image: b142,
-                blurIndex: 82,
-                name: "Smogmog",
-              },
+              { start: 100500, end: 101000, image: b142, blurIndex: 82 },
 
               // Kangama
-              {
-                start: 101000,
-                end: 101500,
-                image: egg,
-                blurIndex: 82,
-                name: "mag es gerne kuschelig..",
-              },
-              {
-                start: 101500,
-                end: 103000,
-                image: b106,
-                blurIndex: 83,
-                name: "Kangama",
-              },
+              { start: 101000, end: 101500, image: egg, blurIndex: 82 },
+              { start: 101500, end: 103000, image: b106, blurIndex: 83 },
 
               // Ratfratz
-              {
-                start: 103000,
-                end: 103500,
-                image: egg,
-                blurIndex: 83,
-                name: "rotzfresch..",
-              },
-              {
-                start: 103500,
-                end: 104500,
-                image: b158,
-                blurIndex: 84,
-                name: "Ratfratz",
-              },
-              {
-                start: 104500,
-                end: 105500,
-                image: b159,
-                blurIndex: 85,
-                name: "Rattikarl",
-              },
+              { start: 103000, end: 103500, image: egg, blurIndex: 83 },
+              { start: 103500, end: 104500, image: b158, blurIndex: 84 },
+              { start: 104500, end: 105500, image: b159, blurIndex: 85 },
 
               // elekid
               { start: 105500, end: 106000, image: egg, blurIndex: 85 },
@@ -3867,34 +3642,23 @@ function App() {
                 <div className="einstellungenuppermenu"></div>
 
                 <div className="overview">
-                  <h3>Wähle Spieler</h3>
+                  <h1>ClipBoard</h1>
+
                   <div className="overview_paket">
-                    <div
-                      className={
-                        selectedSubuser === "Rot"
-                          ? "mayspokedex"
-                          : "mayspokedexaus"
-                      }
-                      onClick={() => {
-                        handleSubuserTogglemay();
-                      }}
-                    >
-                      <div className="overview_Text">
-                        <h1>May</h1>
-                        <p>
-                          Pokedex: {Math.round((blurIndexrot / 163) * 100)}%
-                        </p>
-                        <p>Tropähen: </p>
-                        <p>Top 3 Erledigungen: </p>
-                      </div>
-                      <ul className="ul1">
+                    <div className="mayspokedex">
+                      <h1>May</h1>
+                      <p>Pokedex: {Math.round((blurIndexrot / 163) * 100)}%</p>
+                      <p>Tropähen: </p>
+
+                      <ul className="ul">
                         {aufgaben
 
                           .sort((b, a) => a.countermay - b.countermay)
                           .slice(0, 3)
                           .map((aufgabeObj) => (
-                            <li key={aufgabeObj.id}>
+                            <li className="li1" key={aufgabeObj.id}>
                               <div className="sternenstaub">
+                                <button className="berry_button"></button>
                                 <div className="aufgabe">
                                   {aufgabeObj.aufgabe}
                                 </div>
@@ -3911,33 +3675,22 @@ function App() {
                         alt="blau1"
                       /> */}
                     </div>
+                    <div className="ashspokedex">
+                      <h1>Ash</h1>
+                      <p>
+                        Pokedex: {Math.round((blurIndexblau / 163) * 100)}%{" "}
+                      </p>
+                      <p>Tropähen: </p>
 
-                    <div
-                      className={
-                        selectedSubuser === "Blau"
-                          ? "ashspokedex"
-                          : "ashspokedexaus"
-                      }
-                      onClick={() => {
-                        handleSubuserToggleash();
-                      }}
-                    >
-                      <div className="overview_Text">
-                        <h1>Ash</h1>
-                        <p>
-                          Pokedex: {Math.round((blurIndexblau / 163) * 100)}%{" "}
-                        </p>
-                        <p>Tropähen: </p>
-                        <p>Top 3 Erledigungen: </p>
-                      </div>
                       <ul className="ul1">
                         {aufgaben
 
                           .sort((b, a) => a.counterash - b.counterash)
                           .slice(0, 3)
                           .map((aufgabeObj) => (
-                            <li key={aufgabeObj.id}>
+                            <li className="li1" key={aufgabeObj.id}>
                               <div className="sternenstaub">
+                                <button className="berry_button"></button>
                                 <div className="aufgabe">
                                   {aufgabeObj.aufgabe}
                                 </div>
@@ -3956,7 +3709,7 @@ function App() {
                       /> */}
                     </div>
                   </div>
-                  {/* <h2>Top 3 gemeinsam</h2>
+                  <h2>Top gemeinsam</h2>
                   <ul className="ul">
                     {aufgaben
 
@@ -3971,7 +3724,7 @@ function App() {
                           </div>
                         </li>
                       ))}
-                  </ul> */}
+                  </ul>
                 </div>
                 {/* <button className="menubottons" onClick={handleSubuserToggle}>
                   <h2>jetzt Spieler/in laden</h2>
@@ -3986,7 +3739,6 @@ function App() {
                   <p>Loading...</p>
                 </div>
               ) : ( */}
-
               <>
                 {selectedSubuser === "Rot" ? (
                   <>
@@ -4068,8 +3820,10 @@ function App() {
                   className="alleaufgabenzurück"
                   onClick={handleResetAufgaben}
                 >
-                  <h2>↻</h2>
+                  <h2>REFRESH</h2>
                 </button>
+
+                <h1 style={{ color: "white" }}> Ranking</h1>
               </div>
               {candytext && (
                 <div className="popup_candies">
@@ -4201,22 +3955,55 @@ function App() {
             </div>
           )}
           <div className="menu">
+            <button className="menubuttons">
+              {selectedSubuser === "Rot" ? (
+                <div className="playerbuttons">
+                  <img
+                    src={player2}
+                    onClick={() => {
+                      setAufgabeEinstellung("pokemonCard");
+                      handleSubuserToggle();
+                    }}
+                    className="iconrot"
+                    alt="rot"
+                  />
+                  <p className="lvl"> lvl: {roundedNumber}</p>
+                  <div className="Balken">
+                    <progress
+                      max={100}
+                      value={(originalNumber % 100) + 3}
+                    ></progress>
+                  </div>
+                </div>
+              ) : (
+                <div className="playerbuttons">
+                  <img
+                    src={player1}
+                    onClick={() => {
+                      setAufgabeEinstellung("pokemonCard");
+                      handleSubuserToggle();
+                    }}
+                    className="iconblau"
+                    alt="rot"
+                  />
+
+                  <p className="lvl"> lvl: {roundedNumber}</p>
+                  <div className="Balken">
+                    <progress
+                      max={100}
+                      value={(originalNumber % 100) + 3}
+                    ></progress>
+                  </div>
+                </div>
+              )}
+            </button>
             <button
               className={
-                aufgabeeinstellung === "quests" ? "pokemon1" : "menubuttons"
+                aufgabeeinstellung === "pokedex" ? "pokemon1" : "menubuttons"
               }
-              onClick={() => setAufgabeEinstellung("quests")}
+              onClick={() => setAufgabeEinstellung("pokedex")}
             >
-              <h2>Quests</h2>
-              <div className="Balken">
-                <p className="lvl"> lvl: {roundedNumber}</p>
-                <progress
-                  max={100}
-                  value={(originalNumber % 100) + 3}
-                ></progress>
-              </div>
-
-              {/* <img src={energy} className="button_energy" alt="button_energy" /> */}
+              <img src={pokedex} className="button_home" alt="button_home" />
             </button>
             <button
               className={
@@ -4224,50 +4011,16 @@ function App() {
               }
               onClick={() => setAufgabeEinstellung("pokemon")}
             >
-              <h2>Poki</h2>
-
-              {/* <img src={home} className="button_home" alt="button_home" /> */}
+              <img src={home} className="button_home" alt="button_home" />
             </button>
-            <button className="menubuttons">
-              {selectedSubuser === "Rot" ? (
-                <div className="playerbuttons">
-                  <button
-                    onClick={() => {
-                      setAufgabeEinstellung("pokemonCard");
-                    }}
-                  >
-                    <h2>May</h2>
-                  </button>
-                  {/* <img
-                    src={player2}
-                    onClick={() => {
-                      setAufgabeEinstellung("pokemonCard");
-                      // handleSubuserToggle();
-                    }}
-                    className="iconrot"
-                    alt="rot"
-                  /> */}
-                </div>
-              ) : (
-                <div className="playerbuttons">
-                  <button
-                    onClick={() => {
-                      setAufgabeEinstellung("pokemonCard");
-                    }}
-                  >
-                    <h2>Ash</h2>
-                  </button>
-                  {/* <img
-                    src={player1}
-                    onClick={() => {
-                      setAufgabeEinstellung("pokemonCard");
-                      // handleSubuserToggle();
-                    }}
-                    className="iconblau"
-                    alt="rot"
-                  /> */}
-                </div>
-              )}
+
+            <button
+              className={
+                aufgabeeinstellung === "quests" ? "pokemon1" : "menubuttons"
+              }
+              onClick={() => setAufgabeEinstellung("quests")}
+            >
+              <img src={energy} className="button_energy" alt="button_energy" />
             </button>
             <button
               className={
@@ -4275,19 +4028,11 @@ function App() {
               }
               onClick={() => setAufgabeEinstellung("settings")}
             >
-              <h2> Daten</h2>
-              {/* <img
+              <img
                 src={settings}
                 className="button_settings"
                 alt="button_settings"
-              /> */}
-            </button>
-            <button
-              className="pokedexbuttonmenu"
-              onClick={() => setAufgabeEinstellung("pokedex")}
-            >
-              <h2> Pokedex</h2>
-              {/* <img src={pokedex} className="button_home" alt="button_home" /> */}
+              />
             </button>
           </div>
         </div>

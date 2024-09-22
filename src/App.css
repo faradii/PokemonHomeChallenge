@@ -15,12 +15,7 @@
   background-position: center bottom;
   height: 100%;
   width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  user-select: none;
 }
-
 /* .loading {
   height: 100vh;
   width: 100vw;
@@ -48,15 +43,13 @@
 }
 button {
   margin: 5px;
-  background-color: rgba(255, 255, 255, 0);
-  color: rgb(0, 0, 0);
+  background-color: white;
+  color: rgb(78, 77, 77);
   padding: 8px;
   border: 1px solid grey;
-  border: none;
 }
 .button_reg_log {
-  margin-top: 50px;
-  color: black;
+  margin-top: 30px;
 }
 .inputemail {
   font-size: 18px;
@@ -78,78 +71,61 @@ button {
 
 .menu {
   display: flex;
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  flex-direction: row;
   justify-content: space-around;
 
-  /* width: 100%; */
-  /* height: 110px; */
-  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 110px;
 }
 
 .playerbuttons,
 .iconrot,
 .iconblau {
-  height: 50px;
-  width: 50px;
-  position: relative;
-  left: 20px;
-  border: none;
-  color: white;
-  background-color: #0da77900;
-}
-h2 {
-  color: white;
+  height: 60px;
+  width: 70px;
 }
 .button_home {
   height: 50px;
   width: 50px;
 }
-.menubuttons,
-.pokemon1 {
-  width: 50px;
-  height: 50px;
-  color: white;
+.menubuttons {
+  width: 60px;
+  height: 60px;
+
   padding: 2px;
   border: none;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   background-color: rgba(68, 68, 69, 0);
 }
-
-.pokedexbuttonmenu {
-  width: 50px;
-  /* margin-top: 50px; */
-  /* height: 50px; */
-  background-color: #00000000;
-  /* padding: 2px; */
+/* das ist wenn ein menu geklickt wird*/
+.pokemon1 {
+  width: 60px;
+  height: 60px;
+  padding: 0px;
+  margin-top: -20px;
+  z-index: 100;
   border: none;
-  /* border-radius: 10px; */
-  background-color: rgba(68, 68, 69, 0);
-  position: absolute;
-  /* margin: auto; */
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
+  background-color: rgba(50, 49, 49, 0);
 }
-.Balken {
+/* .Balken {
   position: relative;
-  left: 0px;
   display: flex;
-  bottom: 0px;
-}
+} */
 
 progress {
-  accent-color: rgb(221, 0, 255);
-  height: 30px;
+  accent-color: rgb(247, 46, 46);
+  /* height: 30px; */
 }
-/* .lvl {
-  display: none;
-} */
+.lvl {
+  position: relative;
+
+  color: rgb(255, 255, 255);
+}
 
 .button_energy,
 .button_settings {
   width: 50px;
   height: 50px;
-  /* background-color: #0da77900; */
 }
 .pokemonCard {
   height: calc(100vh - 90px);
@@ -160,38 +136,64 @@ progress {
   align-items: center;
 }
 .overview {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.534);
-  color: #ffffff;
+  width: 100%;
+  border: 15px double rgb(43, 59, 112);
+  border-radius: 10px;
+  /* margin: 30px; */
+  /* padding: 20px; */
+  background-color: white;
   text-align: center;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 25px;
-
-  text-align: justify;
+  padding: 5px;
+  height: 100%;
+}
+.overview_paket {
 }
 
 .pokeCardpokis {
+  /* margin: 20px; */
   height: 30%;
   width: 30%;
 }
 
+.button_switch {
+  background: linear-gradient(to right bottom, #dfe56a, #ff3e03);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 1em 1.5em;
+  border-radius: 20px;
+  color: White;
+}
+
 .ashspokedex {
-  border: 2px dotted rgb(255, 255, 255);
+  padding: 0.2em 0.5em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.ashspokename {
+  background: linear-gradient(to right bottom, #e9f3f26d, #031cff6d);
+  /* border: 1px solid rgb(255, 255, 255); */
+  padding: 0.2em 0.5em;
+  border-radius: 20px;
+  color: White;
+  position: absolute;
+  left: 50px;
 }
 
 .mayspokedex {
-  border: 2px dotted rgb(255, 255, 255);
+  padding: 0.2em 0.5em;
+  text-align: center;
 }
-.mayspokename,
-.ashspokename {
-  color: white;
+.mayspokename {
+  background: linear-gradient(to right bottom, #dfe56a6d, #ff03036d);
+  /* border: 1px solid rgb(255, 255, 255); */
+  padding: 0.2em 0.5em;
+  border-radius: 20px;
+  color: White;
+  position: absolute;
+  left: 50px;
 }
-
 /*Menüseite Pokemon*/
 .pokemon {
   height: calc(100vh - 90px);
@@ -199,8 +201,6 @@ progress {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* border: 15px double rgb(255, 255, 255); */
-  /* background-color: #2d2e2ebc; */
 }
 /* Hauptpokemon*/
 .rot1,
@@ -220,6 +220,7 @@ progress {
 /*Menüseite*/
 .pokedex {
   height: 100%;
+
   overflow-y: scroll;
 
   text-align: center;
@@ -239,6 +240,7 @@ progress {
   width: 80px;
   /* background-color: rgb(255, 255, 255); */
 
+  -webkit-filter: grayscale(1) blur(9px);
   filter: grayscale(1) blur(9px);
 }
 
@@ -248,11 +250,6 @@ progress {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff00;
-  /* border-top: 15px double rgb(43, 59, 112); */
-  /* border-bottom: 15px double rgb(43, 59, 112); */
-
-  /* border-radius: 10px; */
 }
 .textbuttonresetlogout {
   display: flex;
@@ -262,12 +259,12 @@ progress {
   padding-right: 10px;
 }
 .alleaufgabenzurück {
-  background: linear-gradient(to top, #ffffff, #ffffff);
-  border: 3px solid rgb(146, 144, 143);
+  background: linear-gradient(to right bottom, #dfe56a, #1b9f78);
+  border: 1px solid rgb(255, 255, 255);
 
   padding: 1em 1.5em;
-  border-radius: 10px;
-  color: rgb(132, 126, 126);
+  border-radius: 20px;
+  color: White;
 }
 .popup_candies {
   width: 100%;
@@ -387,8 +384,6 @@ progress {
 .counter {
   width: 50px;
   color: #0da779;
-  display: flex;
-  justify-content: flex-end;
   text-align: center;
 }
 /*Menüseite Einstellungen*/
@@ -396,7 +391,6 @@ progress {
   height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
-  /* background-color: rgb(37, 37, 37); */
 }
 
 .addTask {
@@ -409,8 +403,7 @@ progress {
 
 .input_datenbank {
   font-size: 20px;
-  border: 2px solid rgb(170, 183, 241);
-  border-radius: 5px;
+  border: 5px double rgb(160, 173, 221);
 }
 .rateandsave {
   display: flex;
@@ -418,25 +411,20 @@ progress {
   align-items: center;
 }
 .select_button {
-  border: 5px double rgb(185, 186, 189);
+  border: 5px double rgb(160, 173, 221);
 
   background-color: #ffffff;
   color: rgb(255, 153, 0);
   font-size: 25px;
   width: 200px;
   margin: 5px;
-  border: 2px solid rgb(170, 183, 241);
-  border-radius: 5px;
 }
 .aufgabehinzufügen {
-  background-color: rgb(255, 255, 255);
-
-  border: 3px solid rgb(113, 113, 112);
-  box-shadow: 0px 0px 3px 0px;
-
+  background: linear-gradient(to right bottom, #dfe56a, #e59c37);
+  border: 1px solid rgb(255, 255, 255);
   padding: 1em 1.5em;
-  border-radius: 10px;
-  color: rgb(81, 77, 77);
+  border-radius: 20px;
+  color: White;
 }
 
 .ul2 {
@@ -480,11 +468,11 @@ progress {
 .button_help {
   background-color: #0da77900;
   position: absolute;
-  top: 00px;
+  top: 20px;
   right: 20px;
   width: 100px;
   font-size: 1em;
-  color: rgb(0, 0, 0);
+  /* color: rgb(255, 255, 255); */
   border: none;
 }
 
