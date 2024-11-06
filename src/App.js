@@ -1,6 +1,6 @@
 import egg from "./images/ekk.gif";
 
-import player1 from "./images/player1.png";
+
 import player2 from "./images/player2.png";
 import home from "./images/pokeball.png";
 import energy from "./images/energy.png";
